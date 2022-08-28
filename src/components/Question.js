@@ -8,6 +8,7 @@ function Question({ question, onAnswered }) {
     if (timeRemaining === 0) {
       setTimeRemaining(10);
       onAnswered(false);
+      return;
     }
     const timerID = setTimeout(() => {
       setTimeRemaining(timeRemaining - 1)
